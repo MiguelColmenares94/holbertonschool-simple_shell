@@ -10,7 +10,7 @@
 int ss_launch(char **args)
 {
 	pid_t pid;
-	ppid_t ppid;
+	pid_t ppid;
 	int status;
 	char *binpath = "/bin/";
 	char *filepath;
