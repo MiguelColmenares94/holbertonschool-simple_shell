@@ -10,7 +10,7 @@
 int ss_launch(char **args)
 {
 	pid_t pid;
-	pid_t wpid;
+	ppid_t ppid;
 	int status;
 	char *binpath = "/bin/";
 	char *filepath;
@@ -46,7 +46,7 @@ int ss_launch(char **args)
 	{
 		/*Parent Process*/
 		do {
-			wpid = waitpid(pid, &status, WUNTRACED);
+			ppid = waitpid(pid, &status, WUNTRACED);
 		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 
