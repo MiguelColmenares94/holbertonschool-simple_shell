@@ -9,7 +9,7 @@
 char *ss_read_line(void)
 {
         char *line = NULL;
-        ssize_t bufsize = 0; /*getline allocate mem*/
+        size_t bufsize = 0; /*getline allocate mem*/
 
         if (getline(&line, &bufsize, stdin) == -1)
         {
