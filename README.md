@@ -49,8 +49,7 @@ EOF
 |File|Description|
 |--|--|
 |main.h|Header file with prototypes and all libraries|
-|main.c|Calls the shell loop|
-|ss_loop|Print prompt and control Read, Parse & Execute user input|
+|main.c|Print prompt and control Read, Parse & Execute user input|
 |ss_read_line.c|Read stdin from user|
 |ss_split_line|Break the input string into individual tokens|
 |ss_execute|Check if argument input is NULL & calls launch|
