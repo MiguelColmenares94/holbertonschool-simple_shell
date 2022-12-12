@@ -9,13 +9,13 @@
 char *ss_read_line(void)
 {
         char *line = NULL;
-        ssize_t bufsize = 0; // have getline allocate a buffer for us
+        ssize_t bufsize = 0; /*getline allocate mem*/
 
         if (getline(&line, &bufsize, stdin) == -1)
         {
                 if (feof(stdin))
                 {
-                        exit(EXIT_SUCCESS);  // We recieved an EOF
+                        exit(EXIT_SUCCESS);  /*EOF*/
                 }
                 else
                 {
