@@ -1,6 +1,6 @@
 #include "main.h"
 #define LSH_TOK_BUFSIZE 64
-#define LSH_TOK_DELIM " \n"
+#define LSH_TOK_DELIM " \t\r\a\v\n"
 
 /**
  * ss_split_line - Split input string into individual tokens.
