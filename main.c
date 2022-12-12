@@ -10,8 +10,9 @@
 
 int main(int argc, char **argv)
 {
-        // Run command loop.
-        ss_loop();
+	(void) argc, argv;
+        
+	ss_loop();
 
         return EXIT_SUCCESS;
 }
