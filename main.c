@@ -6,7 +6,7 @@
  * Return: 0
  **/
 
-int main(int argc, char **argv)
+int main(void)
 {
         char *line;
         char **args;
