@@ -9,43 +9,46 @@
 
 int ss_launch(char **args)
 {
-        extern char **environ;
-        pid_t pid;
-        int status;
-        char *binpath = "/bin/";
-        char *filepath;
+	pid_t pid, wpid;
+	int status;
+	char *binpath = "/bin/";
+	char *filepath;
+	char *envp[] =
+	{
+		"PATH=/bin",
+		0
+	};
 
-        pid = fork();
+	pid = fork();
 
-        filepath = malloc(sizeof(char) * 1024);
-        strcpy(filepath, binpath);
-        strcat(filepath, args[0]);
-        strcat(filepath, "\0");
+	filepath = malloc(sizeof(char) * 1024);
+	strcpy(filepath, binpath);
+	strcat(filepath, args[0]);
+	strcat(filepath, "\0");
 
 	if (pid == 0)
-        {
-        /*Child process*/
-                if (execve(filepath, args, environ) == -1)
-                {
-                        perror("simple_shell");
-                }
-        exit(EXIT_FAILURE);
-        }
-        else if (pid < 0)
-        {
-        /*Error Forking*/
-        perror("simple_shell");
-        }
-        else
-        {
-        /*Parent Process*/
-        do {
-                wpid = waitpid(pid, &status, WUNTRACED);
-        } while (!WIFEXITED(status) && !WIFSIGNALED(status));
-        }
+	{
+		/*Child process*/
+		if (execve(filepath, args, envp) == -1)
+		{
+			perror("simple_shell");
+		}
+		exit(EXIT_FAILURE);
+	}
+	else if (pid < 0)
+	{
+		/*Error Forking*/
+		perror("simple_shell");
+	}
+	else
+	{
+		/*Parent Process*/
+		do {
+			wpid = waitpid(pid, &status, WUNTRACED);
+		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
+	}
 
-        free(filepath);
+	free(filepath);
 
-        return 1;
+	return (1);
 }
-
