@@ -10,7 +10,7 @@
 int ss_launch(char **args)
 {
         extern char **environ;
-        pid_t pid, wpid;
+        pid_t pid;
         int status;
         char *binpath = "/bin/";
         char *filepath;
