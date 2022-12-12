@@ -1,0 +1,20 @@
+.TH simple_shell 1
+
+.SH simple_shell
+
+A simple UNIX command line interpreter.
+
+.SH DESCRIPTION
+
+The simple_shell is a command line tool that reads lines from the terminal, interprets them, and generally executes other commands.
+
+.SH USE EXAMPLE
+
+ \./simple_shell
+
+.SH AUTHORS
+
+.B Miguel Colmenares
+
+.B Victor Romero
+
