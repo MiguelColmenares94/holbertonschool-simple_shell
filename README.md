@@ -7,8 +7,8 @@ A simple UNIX command line interpreter.
 First clone this repository 
 
 ```bash
-git clone https://github.com/MiguelColmenares94/holbertonschool-printf
-`a
+git clone https://github.com/MiguelColmenares94/holbertonschool-simple_shell
+
 after cloning the repository locate inside the repository folder and use "gcc" compiler.
 
 ```bash
@@ -42,7 +42,7 @@ EOF
 
 |File|Description|
 |--|--|
-|main.h|header file with prototypes and all libraries|
+|main.h|Header file with prototypes and all libraries|
 |main.c|Calls the shell loop|
 |ss_loop|Print prompt and control Read, Parse & Execute user input|
 |ss_read_line.c|Read stdin from user|
