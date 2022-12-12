@@ -9,11 +9,17 @@ First clone this repository
 ```bash
 git clone https://github.com/MiguelColmenares94/holbertonschool-simple_shell
 
-after cloning the repository locate inside the repository folder and use "gcc" compiler.
+```
+After cloning the repository locate inside the repository folder and use "gcc" compiler.
 
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c *.h -o simple_shell
 ```
+##MAN PAGE
+```bash
+man ./man_1_simple_shell
+```
+
 
 ## Usage
 ```bash 
