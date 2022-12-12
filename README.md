@@ -15,7 +15,7 @@ After cloning the repository locate inside the repository folder and use "gcc" c
 ```bash
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c *.h -o simple_shell
 ```
-##MAN PAGE
+MAN PAGE
 ```bash
 man ./man_1_simple_shell
 ```
@@ -50,7 +50,7 @@ EOF
 |--|--|
 |main.h|Header file with prototypes and all libraries|
 |main.c|Print prompt and control Read, Parse & Execute user input|
-|ss_read_line.c|Read stdin from user|
+|ss_read_line|Read stdin from user|
 |ss_split_line|Break the input string into individual tokens|
 |ss_execute|Check if argument input is NULL & calls launch|
 |ss_launch|Take arguments, fork process and run commands in PATH|
