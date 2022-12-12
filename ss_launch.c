@@ -9,11 +9,13 @@
 
 int ss_launch(char **args)
 {
-	pid_t pid, wpid;
+	pid_t pid;
+	pid_t wpid;
 	int status;
 	char *binpath = "/bin/";
 	char *filepath;
 	char *envp[] =
+
 	{
 		"PATH=/bin",
 		0
@@ -49,6 +51,5 @@ int ss_launch(char **args)
 	}
 
 	free(filepath);
-
 	return (1);
 }
