@@ -24,7 +24,7 @@ int ss_launch(char **args)
 
 	if (pid == 0)
         {
-        // Child process
+        /*Child process*/
                 if (execve(filepath, args, environ) == -1)
                 {
                         perror("simple_shell");
@@ -33,12 +33,12 @@ int ss_launch(char **args)
         }
         else if (pid < 0)
         {
-        // Error forking
+        /*Error Forking*/
         perror("simple_shell");
         }
         else
         {
-        // Parent process
+        /*Parent Process*/
         do {
                 wpid = waitpid(pid, &status, WUNTRACED);
         } while (!WIFEXITED(status) && !WIFSIGNALED(status));
