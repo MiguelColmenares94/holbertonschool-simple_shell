@@ -7,7 +7,6 @@
 #include <string.h>
 #include <sys/wait.h>
 
-void ss_loop(void);
 char *ss_read_line(void);
 char **ss_split_line(char *line);
 int ss_launch(char **args);
