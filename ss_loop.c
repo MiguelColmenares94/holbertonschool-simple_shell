@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * ss_loop - Infinite loop for shell.
+ * main - Infinite loop for shell.
  *
- * Return: void
+ * Return: 0
  **/
 
-void ss_loop(void)
+int main(int argc, char **argv)
 {
         char *line;
         char **args;
@@ -22,5 +22,7 @@ void ss_loop(void)
         free(line);
         free(args);
         } while (status);
+
+	return EXIT_SUCCESS;
 }
 
